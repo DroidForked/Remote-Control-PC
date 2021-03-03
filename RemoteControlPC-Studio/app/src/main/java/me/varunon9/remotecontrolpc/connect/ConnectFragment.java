@@ -67,21 +67,16 @@ public class ConnectFragment extends Fragment {
             setLastConnectionDetails(new String[] {ipAddress, port});
             connectButton.setText("Connecting...");
             connectButton.setEnabled(false);
-            new MakeConnection(ipAddress, port, getActivity()) {
+            new MakeWSConnection(ipAddress) {
                 @Override
-                public void receiveData(Object result) {
-                    MainActivity.clientSocket = (Socket) result;
-                    if (MainActivity.clientSocket == null) {
-                        Toast.makeText(getActivity(), "Server is not listening", Toast.LENGTH_SHORT).show();
+                public void receiveData(boolean issuccess) {
+                    if (issuccess){
+                        Toast.makeText(getContext(),"Connection success!!!",Toast.LENGTH_SHORT).show();
+                        connectButton.setText("connected");
+                    }else{
+                        Toast.makeText(getContext(),"Connection fail!!!",Toast.LENGTH_SHORT).show();
                         connectButton.setText("connect");
                         connectButton.setEnabled(true);
-                    } else {
-                        connectButton.setText("connected");
-                        new Thread(new Runnable() {
-                            public void run() {
-                                new Server(getActivity()).startServer(Integer.parseInt(port));
-                            }
-                        }).start();
                     }
                 }
             }.execute();

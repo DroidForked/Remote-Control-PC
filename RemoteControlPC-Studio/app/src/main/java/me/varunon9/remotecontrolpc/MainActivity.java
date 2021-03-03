@@ -11,6 +11,7 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatDelegate;
+import android.util.Log;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -47,6 +48,8 @@ public class MainActivity extends AppCompatActivity
     public static ObjectOutputStream objectOutputStream = null;
     private static AppCompatActivity thisActivity;
     private boolean doubleBackToExitPressedOnce = false;
+
+    private String TAG = "MainActivity";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -87,16 +90,17 @@ public class MainActivity extends AppCompatActivity
 
     @TargetApi(Build.VERSION_CODES.M)
     private void checkForPermission() {
-        if (thisActivity.checkSelfPermission(Manifest.permission.READ_EXTERNAL_STORAGE)
-                != PackageManager.PERMISSION_GRANTED) {
-            // Should we show an explanation?
-            if (thisActivity.shouldShowRequestPermissionRationale(Manifest.permission.READ_EXTERNAL_STORAGE)) {
-                Toast.makeText(thisActivity, "Read Permission is necessary to transfer", Toast.LENGTH_LONG).show();
-            } else {
-                thisActivity.requestPermissions(new String[]{Manifest.permission.READ_EXTERNAL_STORAGE}, 1);
-                //2 is integer constant for WRITE_EXTERNAL_STORAGE permission, uses in onRequestPermissionResult
-            }
-        }
+        Log.i(TAG, "We dont need this permission");
+//        if (thisActivity.checkSelfPermission(Manifest.permission.READ_EXTERNAL_STORAGE)
+//                != PackageManager.PERMISSION_GRANTED) {
+//            // Should we show an explanation?
+//            if (thisActivity.shouldShowRequestPermissionRationale(Manifest.permission.READ_EXTERNAL_STORAGE)) {
+//                Toast.makeText(thisActivity, "Read Permission is necessary to transfer", Toast.LENGTH_LONG).show();
+//            } else {
+//                thisActivity.requestPermissions(new String[]{Manifest.permission.READ_EXTERNAL_STORAGE}, 1);
+//                //2 is integer constant for WRITE_EXTERNAL_STORAGE permission, uses in onRequestPermissionResult
+//            }
+//        }
     }
 
     @Override
@@ -145,12 +149,24 @@ public class MainActivity extends AppCompatActivity
         return super.onOptionsItemSelected(item);
     }
 
+    CharSequence[] supporteditems = {"Connect", "Touchpad", "Keyboard","Power Off"};
+
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
         // Handle navigation view item clicks here.
+        boolean is_supported_item = false;
+        for (int i = 0; i < supporteditems.length; i++) {
+            if (supporteditems[i].equals(item.getTitle())) {
+                is_supported_item = true;
+                break;
+            }
+        }
+        if (!is_supported_item) {
+            Toast.makeText(getApplicationContext(), "Item not support", Toast.LENGTH_SHORT).show();
+            return true;
+        }
 
-        Fragment fragment = null;
 
         int id = item.getItemId();
 
@@ -206,7 +222,7 @@ public class MainActivity extends AppCompatActivity
             if (MainActivity.objectInputStream != null) {
                 MainActivity.objectInputStream.close();
             }
-        } catch(Exception e) {
+        } catch (Exception e) {
             e.printStackTrace();
         }
         Server.closeServer();
@@ -246,7 +262,7 @@ public class MainActivity extends AppCompatActivity
                 MainActivity.clientSocket.close();
                 MainActivity.objectOutputStream.close();
                 MainActivity.clientSocket = null;
-            } catch(Exception e2) {
+            } catch (Exception e2) {
                 e2.printStackTrace();
             }
         }
