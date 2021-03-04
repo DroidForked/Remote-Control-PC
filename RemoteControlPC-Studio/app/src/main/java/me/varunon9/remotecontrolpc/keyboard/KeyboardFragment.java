@@ -385,7 +385,7 @@ public class KeyboardFragment extends Fragment implements View.OnClickListener, 
         }
         Log.v(TAG, "start: " + start + " before: " + before + " count: " + count + " Char:" + s.toString());
         int difference = count - before;
-        if (count > before) {
+        if (count >= before) {
             for (int i = 0; i < difference; i++) {
                 char ch = s.charAt(count + start - 1 - i);
                 Log.v(TAG, "typed: " + ch);
