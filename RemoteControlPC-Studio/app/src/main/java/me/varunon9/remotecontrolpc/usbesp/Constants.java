@@ -1,0 +1,54 @@
+package me.varunon9.remotecontrolpc.usbesp;
+
+public class Constants {
+    final public static String BACKSPACE = "BACKSPACE";
+    final public static String TAB = "TAB";
+    final public static String ENTER = "ENTER";
+    final public static String SHIFT = "SHIFT";
+    final public static String CTRL = "CTRL";
+    final public static String ALT = "ALT";
+    final public static String PAUSE = "PAUSE";
+    final public static String CAPS_LOCK = "CAPS_LOCK";
+    final public static String ESC = "ESC";
+    final public static String PAGE_UP = "PAGE_UP";
+    final public static String PAGE_DOWN = "PAGE_DOWN";
+    final public static String END = "END";
+    final public static String HOME = "HOME";
+    final public static String ARROW_LEFT = "ARROW_LEFT";
+    final public static String ARROW_UP = "ARROW_UP";
+    final public static String ARROW_RIGHT = "ARROW_RIGHT";
+    final public static String ARROW_DOWN = "ARROW_DOWN";
+    final public static String PRINT_SCRN = "PRINT_SCRN";
+    final public static String INSERT = "INSERT";
+    final public static String DELETE = "DELETE";
+    final public static String F1 = "F1";
+    final public static String F2 = "F2";
+    final public static String F3 = "F3";
+    final public static String F4 = "F4";
+    final public static String F5 = "F5";
+    final public static String F6 = "F6";
+    final public static String F7 = "F7";
+    final public static String F8 = "F8";
+    final public static String F9 = "F9";
+    final public static String F10 = "F10";
+    final public static String F11 = "F11";
+    final public static String F12 = "F12";
+    final public static String NUM_LOCK = "NUM_LOCK";
+    final public static String SCROLL_LOCK = "SCROLL_LOCK";
+    final public static String NUMPAD_ZERO = "(NumPad) 0";
+    final public static String NUMPAD_ONE = "(NumPad) 1";
+    final public static String NUMPAD_TWO = "(NumPad) 2";
+    final public static String NUMPAD_THREE = "(NumPad) 3";
+    final public static String NUMPAD_FOUR = "(NumPad) 4";
+    final public static String NUMPAD_FIVE = "(NumPad) 5";
+    final public static String NUMPAD_SIX = "(NumPad) 6";
+    final public static String NUMPAD_SEVEN = "(NumPad) 7";
+    final public static String NUMPAD_EIGHT = "(NumPad) 8";
+    final public static String NUMPAD_NINE = "(NumPad) 9";
+    final public static String NUMPAD_STAR = "(NumPad) *";
+    final public static String NUMPAD_PLUS = "(NumPad) +";
+    final public static String NUMPAD_MINUS = "(NumPad) -";
+    final public static String NUMPAD_DOT = "(NumPad) .";
+    final public static String NUMPAD_SLASH = "(NumPad) /";
+
+}

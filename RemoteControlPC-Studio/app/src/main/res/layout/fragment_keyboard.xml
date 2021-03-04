@@ -2,20 +2,22 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical" >
+    android:orientation="vertical">
 
     <EditText
         android:id="@+id/typeHereEditText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:ems="10"
         android:hint="Tap to write quick text"
-        android:ems="10" >
+        android:inputType="text">
+
         <requestFocus />
     </EditText>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" >
+        android:layout_height="wrap_content">
 
         <Button
             android:id="@+id/enterButton"
@@ -28,30 +30,30 @@
 
         <Button
             android:id="@+id/ctrlButton"
-            android:textAllCaps="false"
             style="?android:attr/buttonStyleSmall"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Ctrl" />
+            android:text="Ctrl"
+            android:textAllCaps="false" />
 
         <Button
             android:id="@+id/altButton"
-            android:textAllCaps="false"
             style="?android:attr/buttonStyleSmall"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Alt" />
+            android:text="Alt"
+            android:textAllCaps="false" />
 
         <Button
             android:id="@+id/shiftButton"
-            android:textAllCaps="false"
             style="?android:attr/buttonStyleSmall"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Shift" />
+            android:text="Shift"
+            android:textAllCaps="false" />
 
         <Button
             android:id="@+id/tabButton"
@@ -75,7 +77,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" >
+        android:layout_height="wrap_content">
 
         <Button
             android:id="@+id/printScrButton"
@@ -116,16 +118,24 @@
     </LinearLayout>
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" >
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
 
         <Button
-            android:id="@+id/nButton"
+            android:id="@+id/Home"
             style="?android:attr/buttonStyleSmall"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="N" />
+            android:text="Home" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone">
+
 
         <Button
             android:id="@+id/tButton"
@@ -171,7 +181,8 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" >
+        android:layout_height="wrap_content"
+        android:visibility="gone">
 
         <Button
             android:id="@+id/cButton"
@@ -225,15 +236,15 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" >
+        android:layout_height="wrap_content">
 
         <Button
-            android:id="@+id/ctrlAltTButton"
+            android:id="@+id/HomeTbutton"
             style="?android:attr/buttonStyleSmall"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Ctrl+Alt+T" />
+            android:text="Home+T" />
 
         <Button
             android:id="@+id/ctrlShiftZButton"

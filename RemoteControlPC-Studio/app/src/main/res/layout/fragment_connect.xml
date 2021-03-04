@@ -23,6 +23,7 @@
         android:ems="10"
         android:layout_marginTop="15dp"
         android:hint="Port Number"
+        android:visibility="gone"
         android:inputType="number" />
 
     <Button
@@ -31,6 +32,12 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
         android:background="@color/colorPrimaryLight"
-        android:text="Connect" />
+        android:text="Connect"
+        />
+    <WebView
+        android:id="@+id/webView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"/>
+
 
 </LinearLayout>
