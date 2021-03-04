@@ -28,6 +28,7 @@ import java.io.ObjectOutputStream;
 import java.net.Socket;
 
 import me.varunon9.remotecontrolpc.connect.ConnectFragment;
+import me.varunon9.remotecontrolpc.espusb.AppInstance;
 import me.varunon9.remotecontrolpc.filedownload.FileDownloadFragment;
 import me.varunon9.remotecontrolpc.filetransfer.FileTransferFragment;
 import me.varunon9.remotecontrolpc.help.HelpFragment;
@@ -39,6 +40,8 @@ import me.varunon9.remotecontrolpc.poweroff.PowerOffFragment;
 import me.varunon9.remotecontrolpc.presentation.PresentationFragment;
 import me.varunon9.remotecontrolpc.server.Server;
 import me.varunon9.remotecontrolpc.touchpad.TouchpadFragment;
+
+import static me.varunon9.remotecontrolpc.espusb.Utility.hideKeyboard;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -86,6 +89,8 @@ public class MainActivity extends AppCompatActivity
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
             checkForPermission();
         }
+        ///////
+        hideKeyboard(thisActivity);
     }
 
     @TargetApi(Build.VERSION_CODES.M)
@@ -166,7 +171,10 @@ public class MainActivity extends AppCompatActivity
             Toast.makeText(getApplicationContext(), "Item not support", Toast.LENGTH_SHORT).show();
             return true;
         }
-
+        if(AppInstance.getInstance().getEspusb()==null){
+            Toast.makeText(getApplicationContext(), "Please connect to the ESP first.", Toast.LENGTH_SHORT).show();
+            return true;
+        }
 
         int id = item.getItemId();
 

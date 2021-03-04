@@ -1,11 +1,11 @@
-package me.varunon9.remotecontrolpc.usbesp.connect;
+package me.varunon9.remotecontrolpc.espusb.connect;
 
 import android.os.AsyncTask;
 
 
 import me.varunon9.remotecontrolpc.Completelistener;
-import me.varunon9.remotecontrolpc.usbesp.AppInstance;
-import me.varunon9.remotecontrolpc.usbesp.EspUsb;
+import me.varunon9.remotecontrolpc.espusb.AppInstance;
+import me.varunon9.remotecontrolpc.espusb.EspUsb;
 
 public abstract class MakeWSConnection extends AsyncTask<Void, Void, Boolean> implements Completelistener {
 

@@ -1,7 +1,6 @@
-package me.varunon9.remotecontrolpc.usbesp.uimanager;
+package me.varunon9.remotecontrolpc.espusb.uimanager;
 
 import android.graphics.drawable.Drawable;
-import android.util.Log;
 import android.widget.Button;
 
 public class ButtonBackgroundManager {

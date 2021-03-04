@@ -13,16 +13,15 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 
-import me.varunon9.remotecontrolpc.MainActivity;
 import me.varunon9.remotecontrolpc.R;
-import me.varunon9.remotecontrolpc.usbesp.AppInstance;
-import me.varunon9.remotecontrolpc.usbesp.Constants;
-import me.varunon9.remotecontrolpc.usbesp.EspUsb;
-import me.varunon9.remotecontrolpc.usbesp.Keyboard;
-import me.varunon9.remotecontrolpc.usbesp.Keypair;
-import me.varunon9.remotecontrolpc.usbesp.UpdatViewCallback;
-import me.varunon9.remotecontrolpc.usbesp.keybindings.AppKeyBindings;
-import me.varunon9.remotecontrolpc.usbesp.uimanager.ButtonBackgroundManager;
+import me.varunon9.remotecontrolpc.espusb.AppInstance;
+import me.varunon9.remotecontrolpc.espusb.Constants;
+import me.varunon9.remotecontrolpc.espusb.EspUsb;
+import me.varunon9.remotecontrolpc.espusb.Keyboard;
+import me.varunon9.remotecontrolpc.espusb.Keypair;
+import me.varunon9.remotecontrolpc.espusb.UpdatViewCallback;
+import me.varunon9.remotecontrolpc.espusb.keybindings.AppKeyBindings;
+import me.varunon9.remotecontrolpc.espusb.uimanager.ButtonBackgroundManager;
 
 /**
  * A simple {@link Fragment} subclass.

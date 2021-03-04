@@ -1,10 +1,6 @@
-package me.varunon9.remotecontrolpc.usbesp;
+package me.varunon9.remotecontrolpc.espusb;
 
-import com.neovisionaries.ws.client.WebSocket;
-
-import java.util.ArrayList;
-
-import me.varunon9.remotecontrolpc.usbesp.keybindings.AppKeyBindings;
+import me.varunon9.remotecontrolpc.espusb.keybindings.AppKeyBindings;
 
 public class AppInstance {
     // static variable single_instance of type Singleton 

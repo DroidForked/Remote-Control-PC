@@ -1,6 +1,6 @@
-package me.varunon9.remotecontrolpc.usbesp
+package me.varunon9.remotecontrolpc.espusb
 
-import me.varunon9.remotecontrolpc.usbesp.Constants.*
+import me.varunon9.remotecontrolpc.espusb.Constants.*
 
 
 class Keyboard {

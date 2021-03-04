@@ -14,7 +14,7 @@ import android.widget.Toast;
 
 import me.varunon9.remotecontrolpc.MainActivity;
 import me.varunon9.remotecontrolpc.R;
-import me.varunon9.remotecontrolpc.usbesp.connect.MakeWSConnection;
+import me.varunon9.remotecontrolpc.espusb.connect.MakeWSConnection;
 
 
 public class ConnectFragment extends Fragment {

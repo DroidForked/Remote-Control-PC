@@ -9,6 +9,8 @@
         android:layout_width="fill_parent"
         android:layout_weight="1"
         android:layout_height="wrap_content"
+        android:clickable="false"
+        android:focusable="false"
         android:gravity="start" />
 
     <LinearLayout
@@ -23,7 +25,20 @@
             android:layout_weight="1"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="Left Click" />
+            android:clickable="false"
+            android:focusable="false"
+            android:text="Left" />
+
+
+        <Button
+            android:id="@+id/middleClickButton"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:clickable="false"
+            android:focusable="false"
+            android:text="Middle" />
 
         <Button
             android:id="@+id/rightClickButton"
@@ -31,6 +46,8 @@
             android:layout_weight="1"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="Right Click" />
+            android:clickable="false"
+            android:focusable="false"
+            android:text="Right" />
     </LinearLayout>
 </LinearLayout>

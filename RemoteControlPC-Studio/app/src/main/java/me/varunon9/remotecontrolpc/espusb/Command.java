@@ -1,4 +1,4 @@
-package me.varunon9.remotecontrolpc.usbesp;
+package me.varunon9.remotecontrolpc.espusb;
 
 public class Command {
     private final String request;

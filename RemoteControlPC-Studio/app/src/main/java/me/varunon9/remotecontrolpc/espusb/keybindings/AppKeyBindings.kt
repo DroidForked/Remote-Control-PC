@@ -1,7 +1,6 @@
-package me.varunon9.remotecontrolpc.usbesp.keybindings
+package me.varunon9.remotecontrolpc.espusb.keybindings
 
-import me.varunon9.remotecontrolpc.CallbackReceiver
-import me.varunon9.remotecontrolpc.usbesp.UpdatViewCallback
+import me.varunon9.remotecontrolpc.espusb.UpdatViewCallback
 
 class AppKeyBindings {
     companion object{
