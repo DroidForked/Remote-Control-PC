@@ -1,3 +1,30 @@
+# Why I did this:
+ 1) The UI of the web interface to controll the espusb is too old
+ 2) I cannot do thing faster in that webui
+ 3) Can add anything you want easily by modifying the app in a good IDE faster,without modifieing or touching the esp8266's code.
+
+
+# Modified to use with [/cnlohr/espusb](https://github.com/cnlohr/espusb)
+
+ 1) APK: [app-debug.apk](https://github.com/DroidForked/Remote-Control-PC/blob/master/RemoteControlPC-Studio/app/build/outputs/apk/debug/app-debug.apk)
+ 2) Python code: [main.py](https://github.com/DroidForked/Remote-Control-PC/blob/master/RemoteControlPC-Studio/espusb_python/main.py). if you want to use with python to control espusb
+
+# How I did this:
+  1) Extract the javascript files from the espusb server
+  2) Make standalone javascript to control the espusb server
+  3) Remove all function in js script,leaving only for keyboard and mouse
+  4) Write same code in python
+  5) As the original code use too much globale variable,I make a classy python script [main.py](https://github.com/DroidForked/Remote-Control-PC/blob/master/RemoteControlPC-Studio/espusb_python/main.py)
+  6) Make same code for java by looking at the python code
+  7) Search an open source android app for controlling PC, and found [Remote-Control-PC](https://github.com/varunon9/Remote-Control-PC)
+  8) Add the java code in [me/varunon9/remotecontrolpc/espusb/](https://github.com/DroidForked/Remote-Control-PC/tree/master/RemoteControlPC-Studio/app/src/main/java/me/varunon9/remotecontrolpc/espusb)
+  9) Modified the app so that it work with the newly added code
+  10) Generated app in [app-debug.apk](https://github.com/DroidForked/Remote-Control-PC/blob/master/RemoteControlPC-Studio/app/build/outputs/apk/debug/app-debug.apk)
+ 
+
+
+# Following are README.md file of [Remote-Control-PC](https://github.com/varunon9/Remote-Control-PC)
+
 # Remote Control PC
 
 Use your Android phone to control your Laptop.
